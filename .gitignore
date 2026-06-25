@@ -23,6 +23,8 @@ backend/vector_store/
 # Node
 frontend/node_modules/
 frontend/.next/
+frontend/tsconfig.tsbuildinfo
+frontend/next-env.d.ts
 frontend/.pnp
 frontend/.pnp.js
 frontend/npm-debug.log*
