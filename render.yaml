@@ -15,13 +15,9 @@ services:
       - key: QDRANT_COLLECTION
         value: serviceperfrag_docs
       - key: UPLOAD_DIR
-        value: /data/uploads
+        value: /tmp/uploads
       - key: ALLOWED_ORIGINS
         sync: false          # set to your frontend URL after it deploys
-    disk:
-      name: uploads
-      mountPath: /data/uploads
-      sizeGB: 1
 
   - type: web
     name: serviceperfrAG-frontend
