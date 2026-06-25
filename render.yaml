@@ -21,10 +21,13 @@ services:
 
   - type: web
     name: serviceperfrAG-frontend
-    runtime: docker
-    dockerContext: frontend
-    dockerfilePath: frontend/Dockerfile
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    startCommand: node .next/standalone/server.js
     plan: free
     envVars:
       - key: NEXT_PUBLIC_API_URL
-        sync: false          # set to https://<your-backend>.onrender.com/api
+        sync: false
+      - key: NODE_ENV
+        value: production
